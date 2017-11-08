@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 11:39:24 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/08 15:13:08 by mabessir         ###   ########.fr       */
+/*   Created: 2017/11/08 16:08:31 by mabessir          #+#    #+#             */
+/*   Updated: 2017/11/08 16:25:00 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int     ft_is_space(char *str)
 {
-	int i;
 
-	i = 0;
-	while (n)
-	{
-		dest[i] = ((void *)src)[i];
-		i++;
-		n--;
-	}
-	return (dest);
+}
+
+int     ft_is_negative(char *str)
+
+int     ft_atoi(const char *str);
+{
+    int     i;
+    long    res;
+    int     neg;
+    char    *strr;
+
+    strr =((char *)str);
+    i = 0;
+    while(strr[i])
+    {
+        while(ft_is_space(strr[i]) == 1)
+            i++;
+        if(ft_is_negative(strr[i] == 1)
+            neg = 1
+    }
+
+    return (neg = 1 ? -res : res);
 }

@@ -6,33 +6,26 @@
 /*   By: Mendy <Mendy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/08 18:05:44 by Mendy             #+#    #+#             */
-/*   Updated: 2017/09/29 16:38:42 by Mendy            ###   ########.fr       */
+/*   Updated: 2017/11/08 15:14:01 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int     ft_strlen(char *str)
+char	*ft_strdup(char *src)
 {
-    int i;
+	int		i;
+	char	*dest;
 
-    i = 0;
-    while (str[i])
-        i++;
-    return (i);
-}
-
-char    *ft_strdup(char *src)
-{
-    int i;
-    char *dest;
-
-    i = 0;
-    dest = (char *)malloc(sizeof(char) * (ft_strlen(src) + 1));
-    while (src[i])
-    {
-        dest[i] = src[i];
-        i++;
-    }
-    return (dest);
+	i = 0;
+	dest = (char *)malloc(sizeof(char) * (ft_strlen(src + 1)));
+	if (!dest)
+		return (0);
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0'
+	return (dest);
 }

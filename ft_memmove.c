@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Mendy <Mendy@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/06 12:49:32 by Mendy             #+#    #+#             */
-/*   Updated: 2017/11/08 15:12:45 by mabessir         ###   ########.fr       */
+/*   Created: 2017/11/08 13:15:05 by mabessir          #+#    #+#             */
+/*   Updated: 2017/11/08 15:13:15 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int i;
+	char	*dest;
+	char 	*tmp;
 
-	i = 0;
-	while (i < n)
-	{
-		s[i] = 0;
-		i++;
-	}
+	tmp = (char *)dst;
+	dest = (char *)malloc(sizeof(dest) * (ft_strlen(src)));
+	if (!dest)
+		return (0);
+	ft_memcpy(dest, src, len);
+	ft_memcpy(dst, dest, len);
+	return (dst);
 }
