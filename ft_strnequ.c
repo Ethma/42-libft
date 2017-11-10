@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 15:20:25 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/10 11:44:22 by mabessir         ###   ########.fr       */
+/*   Created: 2017/11/10 11:20:36 by mabessir          #+#    #+#             */
+/*   Updated: 2017/11/10 15:31:55 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	while (s)
+	int i;
+
+	i = 0;
+	while (s1[i] || i < n)
 	{
-		(*f)(s);
-		&s++;
+		if (s1[i] != s2[i])
+			return (0);
+		i++;
 	}
+	return (1);
 }

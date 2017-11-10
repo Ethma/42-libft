@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:24:47 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/09 15:50:04 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/10 11:45:11 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	while (s)
 	{
 		(*f)(i, s);
-		s++;
+		&s++;
 		i++;
 	}
 }

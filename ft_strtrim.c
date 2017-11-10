@@ -1,31 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 15:36:19 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/10 10:47:46 by mabessir         ###   ########.fr       */
+/*   Created: 2017/11/10 12:54:06 by mabessir          #+#    #+#             */
+/*   Updated: 2017/11/10 15:40:29 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+char	*ft_strtrim(char const *s)
 {
 	int		i;
 	char	*str;
+	int		j;
 
 	i = 0;
-	str = (char *)malloc(sizeof(str) * (ft_strlen(s)));
+	j = ft_strlen(s);
+	str = (char *)malloc(sizeof(str) * (j));
 	if (!str)
 		return (0);
+	while (i != j)
+	{
+		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' ||
+				s[j] == ' ' || s[j] == '\t' || s[j] == '\n')
+			break ;
+		i++;
+		j--;
+	}
+	if (i = j)
+		return (s);
+	i = 0;
+	j = 0;
 	while (s[i])
 	{
-		str[i] = (*f)(s);
-		s++;
+		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+			i++;
+		str[j] = s[i];
 		i++;
+		j++;
 	}
 	return (str);
 }

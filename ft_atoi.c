@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:08:31 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/09 11:13:16 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/10 13:05:44 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int		ft_is_space(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == '\t' || str[i] == '\n' || str[i] == ' ' || str[i] == '\v'\
-	|| str[i] == '\f' || str[i] == '\r')
+		if (str[i] == '\t' || str[i] == '\n' || str[i] == ' ' || str[i] == '\v'
+		|| str[i] == '\f' || str[i] == '\r')
 			return (1);
 		i++;
 	}
@@ -37,6 +37,8 @@ int		ft_atoi(const char *str)
 	strr = ((char *)str);
 	i = 0;
 	res = 0;
+	if (ft_isascii(str) == 0)
+		return (0);
 	while (strr[i])
 	{
 		while (ft_is_space(&strr[i]) == 1)

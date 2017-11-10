@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 15:20:25 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/10 11:44:22 by mabessir         ###   ########.fr       */
+/*   Created: 2017/11/10 10:29:55 by mabessir          #+#    #+#             */
+/*   Updated: 2017/11/10 15:33:33 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	while (s)
+	unsigned int	i;
+	char			*str;
+
+	i = 0;
+	str = (char *)malloc(sizeof(str) * (ft_strlen(s)));
+	if (!str)
+		return (0);
+	while (s[i])
 	{
-		(*f)(s);
-		&s++;
+		str[i] = (*f)(i, s);
+		s++;
+		i++;
 	}
+	return (str);
 }

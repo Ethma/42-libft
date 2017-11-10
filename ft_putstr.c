@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 15:20:25 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/10 11:44:22 by mabessir         ###   ########.fr       */
+/*   Created: 2017/11/10 14:18:11 by mabessir          #+#    #+#             */
+/*   Updated: 2017/11/10 15:34:25 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+void	ft_putstr(char const *s)
 {
-	while (s)
+	int i;
+
+	i = 0;
+	while (s[i])
 	{
-		(*f)(s);
-		&s++;
+		ft_putchar(s[i]);
+		i++;
 	}
 }

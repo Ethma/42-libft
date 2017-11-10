@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 15:20:25 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/10 11:44:22 by mabessir         ###   ########.fr       */
+/*   Created: 2017/11/10 14:23:35 by mabessir          #+#    #+#             */
+/*   Updated: 2017/11/10 15:34:45 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+void	ft_putnbr(int n)
 {
-	while (s)
+	long i;
+
+	i = n;
+	if (i < 0)
 	{
-		(*f)(s);
-		&s++;
+		i = -i;
+		ft_putchar('-');
 	}
+	if (i >= 10)
+	{
+		ft_putnbr(i / 10);
+		ft_putnbr(i % 10);
+	}
+	else
+		ft_putchar(i + '0');
 }
