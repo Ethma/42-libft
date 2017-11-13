@@ -6,7 +6,7 @@
 /*   By: Mendy <Mendy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 12:25:29 by Mendy             #+#    #+#             */
-/*   Updated: 2017/11/09 10:03:21 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/13 11:42:14 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (i < n)
 	{
-		s[i] = c;
+		((char *)s)[i] = c;
 		i++;
 	}
 	return (s);

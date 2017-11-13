@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:54:06 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/10 15:40:29 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/13 13:33:56 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,13 @@ char	*ft_strtrim(char const *s)
 	int		j;
 
 	i = 0;
-	j = ft_strlen(s);
+	j = ft_strlen((char *)s);
+	ft_is_space(&i, &j, (char *)s);
 	str = (char *)malloc(sizeof(str) * (j));
 	if (!str)
 		return (0);
-	while (i != j)
-	{
-		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' ||
-				s[j] == ' ' || s[j] == '\t' || s[j] == '\n')
-			break ;
-		i++;
-		j--;
-	}
-	if (i = j)
-		return (s);
+	if (i == j)
+		return ((char *)s);
 	i = 0;
 	j = 0;
 	while (s[i])

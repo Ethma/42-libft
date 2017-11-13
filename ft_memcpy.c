@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 11:39:24 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/08 15:13:08 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/13 11:39:34 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	while (n)
 	{
-		dest[i] = ((void *)src)[i];
+		((char *)dest)[i] = ((char *)src)[i];
 		i++;
 		n--;
 	}

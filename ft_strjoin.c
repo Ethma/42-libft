@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:50:34 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/10 15:33:15 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/13 12:19:16 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	char	*str;
 
-	i = ft_strlen(s1) + ft_strlen(s2);
+	k = 0;
+	j = 0;
+	i = ft_strlen((char *)s1) + ft_strlen((char *)s2);
 	str = (char *)malloc(sizeof(str) * (i));
 	while (s1)
 	{

@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_countint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 12:38:47 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/13 15:05:35 by mabessir         ###   ########.fr       */
+/*   Created: 2017/11/13 10:45:39 by mabessir          #+#    #+#             */
+/*   Updated: 2017/11/13 11:27:27 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+int		ft_countint(int n)
 {
-	while (n--)
+	size_t	len;
+
+	len = 0;
+	if (n == -2147483648)
+		return (11);
+	if (n < 0)
 	{
-		*(char *)dest++ = *(char *)src;
-		if (*(char *)src++ == (char)c)
-			return ((char *)dest);
+		len++;
+		n = -n;
 	}
-	return (NULL);
+	if (n == 0)
+		return (1);
+	while (n)
+	{
+		n = n / 10;
+		len++;
+	}
+	return (len);
 }

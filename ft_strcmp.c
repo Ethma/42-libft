@@ -6,7 +6,7 @@
 /*   By: Mendy <Mendy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/12 11:44:17 by Mendy             #+#    #+#             */
-/*   Updated: 2017/11/08 15:13:50 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/13 16:23:08 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ int		ft_strcmp(const char *s1, const char *s2)
 	i = 0;
 	while (s1[i])
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 		i++;
 	}
+	if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+		return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 	return (0);
 }

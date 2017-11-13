@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:15:05 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/10 11:18:19 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/13 16:29:42 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*dest;
+	void	*dest;
 
-	dest = ((char *)dst);
-	ft_memcpy(dst, src, len - 1);
-	return (dest);
+	dest =(void *)malloc(sizeof(dest)* len);
+	ft_memcpy(dest, src, len);
+	ft_memcpy(dst, dest, len);
+	free(dest);
+	return (dst);
 }

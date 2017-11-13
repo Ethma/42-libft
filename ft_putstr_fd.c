@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 15:14:43 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/10 15:36:32 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/13 11:46:07 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_putstr_fd(char const *s, int fd)
 	int i;
 
 	i = 0;
-	while (str[i])
+	while (s[i])
 	{
-		ft_putchar_fd(str[i]);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
 }
