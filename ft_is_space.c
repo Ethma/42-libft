@@ -6,20 +6,23 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 13:26:04 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/13 13:32:35 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/14 15:25:46 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_is_space(int *i, int *j, char *s)
+int		ft_is_space(size_t i, size_t j, const char *s)
 {
-	while (*i != *j)
+	while (i != j)
 	{
-		if (s[*i] == ' ' || s[*i] == '\t' || s[*i] == '\n' ||
-				s[*j] == ' ' || s[*j] == '\t' || s[*j] == '\n')
-			break ;
+		if (ft_isalpha(s[j]) == 1 || ft_isalpha(s[i] == 1))
+			return (0);
+		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' ||
+				s[j] == ' ' || s[j] == '\t' || s[j] == '\n')
+			return (1);
 		i++;
 		j--;
 	}
+	return (0);
 }

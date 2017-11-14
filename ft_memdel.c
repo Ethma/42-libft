@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:24:02 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/13 11:40:05 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/14 14:45:08 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_memdel(void **ap)
 {
 	free(*ap);
-	ap = NULL;
+	*ap = NULL;
 }

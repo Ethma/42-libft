@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 09:10:37 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/13 13:03:22 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/14 16:44:23 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_itoa(int n)
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	i = (ft_countint(n) + 1);
-	s = (char *)malloc(sizeof(s) * i);
+	i = ft_countint(n) + 1;
+	s = ft_strnew(i);
 	if (!s)
 		return (NULL);
 	if (n < 0)

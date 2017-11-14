@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 12:57:54 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/13 16:41:51 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/14 15:49:40 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ void	*ft_memset(void *s, int c, size_t n);
 char	*ft_strcat(char *dest, char *src);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
-int		ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strcpy(char *dest, const char *src);
-char	*ft_strdup(char *src);
-int		ft_strlcat(char *dest, char *src, size_t n);
-char	*ft_strncat(char *dest, char *src, int n);
+char	*ft_strdup(const char *src);
+size_t	ft_strlcat(char *dest, const char *src, size_t n);
+char	*ft_strncat(char *dest, const char *src, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-char	*ft_strncpy(char *dest, char *src, size_t n);
+char	*ft_strncpy(char *dest, const char *src, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strstr(const char *haystack, const char *needle);
 int		ft_isalpha(int c);
@@ -70,6 +70,6 @@ void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 int		ft_countint(int n);
 char	*ft_itoa(int n);
-void	ft_is_space(int *i, int *j, char *s);
+int		ft_is_space(size_t i, size_t j, const char *s);
 
 #endif

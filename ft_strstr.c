@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 14:56:22 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/09 10:03:54 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/14 14:36:05 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	int i;
 	int j;
 
+	if (!*needle)
+		return ((char *)haystack);
 	i = 0;
 	while (haystack[i])
 	{

@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:53:21 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/13 12:25:55 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/14 16:29:36 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strnew(size_t size)
 	size_t	i;
 
 	i = 0;
-	str = (char *)malloc(sizeof(str) * (size));
+	str = (char *)malloc(sizeof(char) * (size + 1));
 	if (!str)
 		return (NULL);
-	while (i < size)
+	while (i <= size)
 	{
 		str[i] = '\0';
 		i++;

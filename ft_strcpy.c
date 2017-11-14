@@ -6,7 +6,7 @@
 /*   By: Mendy <Mendy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/08 18:35:05 by Mendy             #+#    #+#             */
-/*   Updated: 2017/11/13 16:50:10 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/14 16:40:23 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strcpy(char *dest, const char *src)
 	int i;
 
 	i = 0;
-	if(!dest || !src)
+	if(!dest && !src)
 		return (0);
 	while (src[i])
 	{

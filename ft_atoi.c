@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:08:31 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/13 10:10:07 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/14 15:30:20 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		ft_atoi(const char *str)
 {
 	int		i;
-	long	res;
+	long long int	res;
 	int		neg;
 
 	i = 0;
