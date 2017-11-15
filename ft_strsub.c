@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:24:14 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/14 16:24:40 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/15 15:17:53 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
-	int		i;
+	size_t	i;
 
 	i = 0;
+	if (!s)
+		return (0);
 	str = ft_strnew(len);
 	if (!str)
 		return (NULL);

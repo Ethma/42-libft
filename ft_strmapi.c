@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 10:29:55 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/14 16:32:22 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/15 15:00:46 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*str;
 
-	if (!str)
+	if (!s || !f)
 		return (0);
 	i = ft_strlen((char *)s);
 	str = ft_strnew(i);

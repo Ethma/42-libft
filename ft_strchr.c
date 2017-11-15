@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 14:39:28 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/13 16:16:30 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/15 15:14:54 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
-		if (*(unsigned char *)s == (unsigned char)c)
-			return ((char *)s);
+	if (*(unsigned char *)s == (unsigned char)c)
+		return ((char *)s);
 	return (NULL);
 }
