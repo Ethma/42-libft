@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 12:57:54 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/14 15:49:40 by mabessir         ###   ########.fr       */
+/*   Updated: 2017/11/15 12:06:35 by Mendy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,6 @@ void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 int		ft_countint(int n);
 char	*ft_itoa(int n);
-int		ft_is_space(size_t i, size_t j, const char *s);
+int		ft_str_is_space(size_t i, size_t j, const char *s);
 
 #endif
