@@ -6,7 +6,7 @@
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 12:57:54 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/15 12:06:35 by Mendy            ###   ########.fr       */
+/*   Updated: 2017/11/16 13:36:32 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *s, int c, size_t n);
-char	*ft_strcat(char *dest, char *src);
+char	*ft_strcat(char *dest, const char *src);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 size_t	ft_strlen(const char *str);
@@ -71,5 +71,8 @@ void	ft_putnbr_fd(int n, int fd);
 int		ft_countint(int n);
 char	*ft_itoa(int n);
 int		ft_str_is_space(size_t i, size_t j, const char *s);
+int		ft_intrlen(const int **tab);
+int		ft_strrlen(const char **tab);
+void	ft_freetab2d(char	**tab);
 
 #endif

@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_intrlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabessir <mabessir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 10:05:20 by mabessir          #+#    #+#             */
-/*   Updated: 2017/11/16 10:02:14 by mabessir         ###   ########.fr       */
+/*   Created: 2017/11/16 13:18:16 by mabessir          #+#    #+#             */
+/*   Updated: 2017/11/16 13:19:10 by mabessir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *dest, const char *src)
+int		ft_intrlen(const int **tab)
 {
 	int i;
 
-	i = ft_strlen(dest);
-	while (*src)
-	{
-		dest[i] = *src;
+	i = 0;
+	while (*tab[i])
 		i++;
-		src++;
-	}
-	dest[i] = 0;
-	return (dest);
+	return (i);
 }
